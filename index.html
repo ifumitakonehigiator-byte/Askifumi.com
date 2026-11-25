@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AskIfumi.com — Everyday & Applied Psychology</title>
+  <style>
+    :root {
+      --bg: #f8f6f2;
+      --surface: #ffffff;
+      --text: #1c221f;
+      --muted: #525c56;
+      --accent: #275849;
+      --accent-hover: #1d4438;
+      --accent-soft: #e8f0ed;
+      --border: #e1dbd2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 56px 0 44px;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      line-height: 1.22;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 66ch;
+      margin-bottom: 26px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 65ch;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background-color: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .card a {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+      margin-top: 24px;
+      text-align: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-row">
+      <a class="brand" href="#">AskIfumi.com</a>
+      <nav aria-label="Primary Navigation">
+        <a href="#focus">Psychology</a>
+        <a href="#letters">Paid Letters</a>
+        <a href="#links">Books &amp; YouTube</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top: none;">
+      <div class="container">
+        <span class="badge">Everyday &amp; Applied Psychology</span>
+        <h1>Practical psychology for family, parenting, sociology, and business.</h1>
+        <p class="lead">
+          AskIfumi.com brings together everyday and applied psychology to help you understand human behavior,
+          strengthen family and parenting relationships, read social dynamics, and lead with calm clarity.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="YOUR_SELAR_SUBSCRIPTION_URL" target="_blank" rel="noopener noreferrer">
+            Subscribe to Paid Letters
+          </a>
+          <a class="btn btn-secondary" href="YOUR_SELAR_STORE_URL" target="_blank" rel="noopener noreferrer">
+            Books &amp; Digital Guides
+          </a>
+          <a class="btn btn-secondary" href="YOUR_YOUTUBE_URL" target="_blank" rel="noopener noreferrer">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="container">
+        <h2>Where Applied Psychology Meets Daily Life</h2>
+        <p class="section-intro">
+          Everything on AskIfumi.com centers on psychology in real-world settings rather than abstract theory alone.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Family &amp; Parenting</h3>
+            <p>Restorative communication, emotional regulation, and calm, connected parenting for everyday challenges.</p>
+          </div>
+          <div class="card">
+            <h3>Sociology &amp; Culture</h3>
+            <p>Exploring how social patterns, group norms, and everyday environments shape habits and relationships.</p>
+          </div>
+          <div class="card">
+            <h3>Business &amp; Leadership</h3>
+            <p>Applying behavioral insight to decision-making, trust, communication, and sustainable work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="letters">
+      <div class="container">
+        <h2>Paid Letters &amp; Subscriber Notes</h2>
+        <p class="section-intro">
+          Get deeper reflections, practical frameworks, and applied psychology notes delivered to subscribers through Selar.
+        </p>
+        <a class="btn btn-primary" href="YOUR_SELAR_SUBSCRIPTION_URL" target="_blank" rel="noopener noreferrer">
+          Join Paid Letters on Selar
+        </a>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="container">
+        <h2>Books, YouTube &amp; Direct Links</h2>
+        <p class="section-intro">
+          Connect directly to your books, video conversations, and related pages as your platform grows.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3>Selar Books &amp; Products</h3>
+            <p>Browse and purchase your books and digital resources directly on Selar.</p>
+            <a href="YOUR_SELAR_STORE_URL" target="_blank" rel="noopener noreferrer">Open Selar Store &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>YouTube Channel</h3>
+            <p>Watch talks, breakdowns, and practical guidance on everyday psychology.</p>
+            <a href="YOUR_YOUTUBE_URL" target="_blank" rel="noopener noreferrer">Go to YouTube &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>Connected Link</h3>
+            <p>Direct link to a featured page, article, or initiative you want visitors to see.</p>
+            <a href="YOUR_OTHER_LINK_URL" target="_blank" rel="noopener noreferrer">Visit Linked Page &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AskIfumi.com &mdash; Everyday &amp; Applied Psychology.</p>
+    </div>
+  </footer>
+</body>
+</html>
